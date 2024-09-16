@@ -1,2 +1,3 @@
 David Toledo
-I have installed UTM, will instal Kali soon
+I have installed UTM, I have now installed kali and have done the optinal burpsuite test, everything seemed good.
+My plan for using Kali, probably its like a safer enviorment where we can see different dangers and learn to handle them.
