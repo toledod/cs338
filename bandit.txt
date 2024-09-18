@@ -30,7 +30,7 @@ commands:
 ls
 cd inhere
 cat ./-file07
-summary: Sometimes you just have to brute force search for something
+summary: file command helps you find what contents are in there
 
 5 -> 6: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 
