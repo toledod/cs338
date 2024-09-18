@@ -45,28 +45,42 @@ cat ./.file2
 summary: du helps you see the disk storage, -a is used to see it for all files, and -b specifies bytes in du.
 the threshold flag lets us set a limit to help us find what we are looking for faster.
 
-6 -> 7:
+6 -> 7:morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 commands:
+cd ..
+cd ..
+ls -aR -l | grep "bandit7" | grep "33"
+find -name "*.password" | grep "bandit7.password"
+cd var/lib/dpkg/info
+cat bandit7.password
 
 summary:
 
-7 -> 8:
+7 -> 8: dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 commands:
+
+find data.txt
+grep "millionth" data.txt
 
 summary:
 
-8 -> 9:
+8 -> 9: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
 commands:
-
+cat data.txt
+sort data.txt | uniq -u
 summary:
 
-9 -> 10:
+9 -> 10: FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
 commands:
+ls
+strings data.txt
 
-summary:
+summary: use strings to find all the strings in the documents and split them up nicely to view
 
-10 -> 11:
+10 -> 11: dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
 commands:
+ls
+base64 -d data.txt
 
 summary:
 
