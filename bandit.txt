@@ -3,20 +3,19 @@
 commands:
 ls
 cat readme
-summary:
+summary: use ls to see what is available and use cat to open it
 
 1 -> 2:263JGJPfgU6LtdEvgfWU1XP5yac29mFx
 commands:
 ls
 cat ./-
-summary:
+summary: need to give full path in order to open - files with cat, or you can use < too.
 
 2 -> 3:MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
 commands:
 ls
 cat "spaces in this filename"
-
-summary:
+summary: Opening files with spaces in the name require quotes to group together
 
 3 -> 4:2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 commands:
@@ -24,15 +23,13 @@ ls
 cd inhere
 ls -a
 cat ./...Hiding-From-You
-
-summary:
+summary: use the -a flag in order to see everything including hidden files with ls.
 
 4 -> 5:4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
 commands:
 ls
 cd inhere
 cat ./-file07
-
 summary: Sometimes you just have to brute force search for something
 
 5 -> 6: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
@@ -45,7 +42,8 @@ du -a -b --threshold=-1033
 cd maybehere07
 cat ./.file2
 
-summary:
+summary: du helps you see the disk storage, -a is used to see it for all files, and -b specifies bytes in du.
+the threshold flag lets us set a limit to help us find what we are looking for faster.
 
 6 -> 7:
 commands:
