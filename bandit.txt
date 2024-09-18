@@ -47,44 +47,44 @@ the threshold flag lets us set a limit to help us find what we are looking for f
 
 6 -> 7:morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 commands:
+ls
 cd ..
 cd ..
-ls -aR -l | grep "bandit7" | grep "33"
+ls -aR -l | grep "bandit7" | grep "bandit6" | grep "33"
 find -name "*.password" | grep "bandit7.password"
 cd var/lib/dpkg/info
 cat bandit7.password
-
-summary:
+summary: using ls -aR -l and finding bandit7 and 33 in it helps us see that the file exisits. Then use find to find the path, giving us the password.
 
 7 -> 8: dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 commands:
-
-find data.txt
+ls
+cat data.txt
 grep "millionth" data.txt
 
-summary:
+summary: use grep to find the word we needed to locate
 
 8 -> 9: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
 commands:
 cat data.txt
 sort data.txt | uniq -u
-summary:
+summary: uniq -u helps highlight unique parts of the text with no duplicates
 
 9 -> 10: FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
 commands:
 ls
 strings data.txt
-
-summary: use strings to find all the strings in the documents and split them up nicely to view
+strings data.txt | grep "=="
+summary: use strings to find all the strings in the documents and split them up nicely to view, grep can hel
 
 10 -> 11: dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
 commands:
 ls
 base64 -d data.txt
+summary: used base64 to turn files into base64, or -d to do it vise-versa
 
-summary:
-
-11 -> 12:
+11 -> 12: 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
 commands:
-
-summary:
+ls
+cat data.txt | tr "a-zA-Z" "n-za-mN-ZA-M"
+summary: tr can help change what the alphabet of the document consists of, and this can help us undo the rot13.
