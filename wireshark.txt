@@ -14,7 +14,7 @@ David Toledo
 3. Why does the client need a port?
 
 The webserver needs a specific place to talk to me or else it might communicate with potential different servers on my computer. Hence 37218 is a port
-that has been assigned the service to talk to this website.
+that has been assigned the service to talk to this website. Also allows TCP to know what software it is talking to.
 
 4. What frame contains the actual date and time? 
 
