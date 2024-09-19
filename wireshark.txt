@@ -3,7 +3,25 @@ David Toledo
 ===== DAYTIME =====
 1. Identify the parts of the TCP 3-way handshake by listing the frame summaries of the relevant frames.
 
-1 0.000000000 192.168.64.2 132.163.97.1 TCP 74 37218 → 13 [SYN] Seq=0 Win=32120 Len=® MSS=1460 SACK_PERM TSval=783313780 TSecr=0 WS=128
-2 0.029730666 132.163.97.1 192.168.64.2 TCP 66 13 → 37218 [SYN, ACK] Seq=® Ack=1 Win=65535 Len=0 MSS=1382 WS=64 SACK_PERM
-3 0.029981645 192.168.64.2 132.163.97.1 TCP 54 13 → 37218 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 37218 → 13 [ACK] Seq=1 Ack=1 Win=32128 Len=©|
+1  0.000000000  192.168.64.2  132.163.97.1  TCP  74  37218 → 13 [SYN] Seq=0 Win=32120 Len=® MSS=1460 SACK_PERM TSval=783313780 TSecr=0 WS=128
+2  0.029730666  132.163.97.1  192.168.64.2  TCP  66  13 → 37218 [SYN, ACK] Seq=® Ack=1 Win=65535 Len=0 MSS=1382 WS=64 SACK_PERM
+3  0.029981645  192.168.64.2  132.163.97.1  TCP  54  13 → 37218 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 37218 → 13 [ACK] Seq=1 Ack=1 Win=32128 Len=©|
+
+2. What port number does the client (i.e. nc on your Kali computer) use for this interaction?
+
+37218
+
+3. Why does the client need a port?
+
+The webserver needs a specific place to talk to me or else it might communicate with potential different servers on my computer. Hence 37218 is a port
+that has been assigned the service to talk to this website.
+
+4. What frame contains the actual date and time? 
+
+4  0.060677147  132.163.97.1  192.168.64.2  DAYTIME  105  DAYTIME Response
+
+5. What do [SYN] and [ACK] mean?
+
+
+===== HTTP =====
 
