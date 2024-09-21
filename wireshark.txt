@@ -31,8 +31,7 @@ which is the daytime servers address.
 ===== HTTP =====
 1. How many TCP connections were opened? How can you tell?
 
-I will say 4 TCP connections where opened, as there was 4 FIN's sent within the wireshark capture, which I would assume means
-that it needed to open 4 connections to close those.
+I will say 2 TCP connections where opened, as there was 4 FIN's sent within the wireshark capture, 2 from client/server for each connection.
 
 2. Can you tell where my homepage (index.html) was requested? (If not, why not? If so, include frame summaries and/or other info that supports your answer.)
 
