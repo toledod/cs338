@@ -31,7 +31,14 @@ which is the daytime servers address.
 ===== HTTP =====
 1. How many TCP connections were opened? How can you tell?
 
-3. Can you tell where my homepage (index.html) was requested? (If not, why not? If so, include frame summaries and/or other info that supports your answer.)
+I will say 4 TCP connections where opened, as there was 4 FIN's sent within the wireshark capture, which I would assume means
+that it needed to open 4 connections to close those.
+
+2. Can you tell where my homepage (index.html) was requested? (If not, why not? If so, include frame summaries and/or other info that supports your answer.)
+
+30  0.322491856  172.233.221.124 192.168.64.2  HTTP  667  HTTP/1.1 200 OK (text/html) - this frame holds the (text/html) which 
+when we observe through wireshark, we can see that it hold the html of the index page.
+
 
 
 3. Can you tell where my photograph (jeff-square-colorado.jpg) was requested?
