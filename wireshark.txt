@@ -44,3 +44,8 @@ when we observe through wireshark, we can see that it hold the html of the index
 
 32  0.377223341  192.168.64.2  172.233.221.124 HTTP  380  GET /jeff-square-colorado.jpg HTTP/1.1
 This frame shows us a GET request from kali to the server, asking for the jeff-square png file.
+
+
+===== QUESTIONS =====
+
+This is helpful information to have, but I'm wondering how this could create vulnerabilities. 
