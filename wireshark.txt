@@ -29,4 +29,12 @@ The daytime server initiated the closing of the TCP connection as the first fram
 which is the daytime servers address.
 
 ===== HTTP =====
+1. How many TCP connections were opened? How can you tell?
 
+3. Can you tell where my homepage (index.html) was requested? (If not, why not? If so, include frame summaries and/or other info that supports your answer.)
+
+
+3. Can you tell where my photograph (jeff-square-colorado.jpg) was requested?
+
+32  0.377223341  192.168.64.2  172.233.221.124 HTTP  380  GET /jeff-square-colorado.jpg HTTP/1.1
+This frame shows us a GET request from kali to the server, asking for the jeff-square png file.
