@@ -1,33 +1,27 @@
 A. Go to FDF and use your browser's Inspector to take a look at your cookies for cs338.jeffondich.com. Are there cookies for that domain? What are their names and values?
-
-
-
+  There is a cookie in  cs338.jeffondich.com, it is a theme cookie, and the value is default.
 
 B. Using the "Theme" menu on the FDF page, change your theme to red or blue. Look at your cookies for cs338.jeffondich.com again. Did they change?
-
+  Yes changing the theme will change the value of the theme cookie to whatever theme I pick.
 
 
 
 C. Do the previous two steps (examining cookies and changing the theme) using Burpsuite. What "Cookie:" and "Set-Cookie:" HTTP headers do you see? Do you see the same cookie values as you did with the Inspector?
-
-
-
+  When I first load the website, the response to my GET request had a header of Set-Cookie: theme=default, which coorisponds with what we saw previously. It also shows an experiation date.
+When chaning the theme, we see the GET request contain the requested theme as "?theme=red" and the cookie theme is still default. The response now contains a Set-Cookie header in which it matches the theme I picked out. 
 
 D. Quit your browser, relaunch it, and go back to the FDF. Is your red or blue theme (wherever you last left it) still selected?
-
-
+  Yes, after quitting and relaunching, the browser remained with the theme I kept, as the cookie the broswer sent the request with was teh theme I last selected.
 
 
 E. How is the current theme transmitted between the browser and the FDF server?
-
-
-
+  The current theme was sent via a header in the GET request, not a Set-Cookie but just a Cookie header with the value being red (the theme I picked).
 
 
 F. When you change the theme, how is the change transmitted between the browser and the FDF server?
-
-
-
+  When changing the theme, the server sends a GET request with the theme I requested as part of what it is getting. We see the GET requested formatted as:
+  GET /fdf/?theme=blue HTTP/1.1
+  The request then follows with a Set-Cookie header to contain the requested theme color.
 
 
 G. How could you use your browser's Inspector to change the FDF theme without using the FDF's Theme menu?
