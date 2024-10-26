@@ -25,19 +25,17 @@ F. When you change the theme, how is the change transmitted between the browser 
 
 
 G. How could you use your browser's Inspector to change the FDF theme without using the FDF's Theme menu?
-
+     I cannot seem to do this, but I would think that changing the value of the cookie under the application/storage section of Inspect would be able to change the theme.
 
 
 
 
 H. How could you use Burpsuite's Proxy tool to change the FDF theme without using the FDF's Theme menu?
-
-
-
+  In Burp, we can edit the intercepted GET request to contain the desired theme, therefore changing the theme without us actually needing to click the theme button.
 
 
 I. Where does your OS (the OS where you're running your browser and Burpsuite, that is) store cookies? (This will require some internet searching, most likely.)
-
+  On Kali, Burpsuite stores the cookies in this sqp file at this path: /home/kali/.BurpSuite/pre-wired-browser/Default/Cookies
 
 
 
