@@ -1,3 +1,7 @@
+David Toledo
+
+Cookies_________________________
+
 A. Go to FDF and use your browser's Inspector to take a look at your cookies for cs338.jeffondich.com. Are there cookies for that domain? What are their names and values?
   There is a cookie in  cs338.jeffondich.com, it is a theme cookie, and the value is default.
 
@@ -36,6 +40,29 @@ H. How could you use Burpsuite's Proxy tool to change the FDF theme without usin
 
 I. Where does your OS (the OS where you're running your browser and Burpsuite, that is) store cookies? (This will require some internet searching, most likely.)
   On Kali, Burpsuite stores the cookies in this sqp file at this path: /home/kali/.BurpSuite/pre-wired-browser/Default/Cookies
+
+
+
+XSS__________________________
+
+Provide a diagram and/or a step-by-step description of the nature and timing of Moriarty's attack on users of the FDF. Note that some of the relevant actions may happen long before other actions.
+
+
+
+Describe an XSS attack that is more virulent than Moriarty's "turn something red" and "pop up a message" attacks. Think about what kinds of things the Javascript might have access to via Alice's browser when Alice views the attacker's post.
+
+
+
+
+Do it again: describe a second attack that is more virulent than Moriarty's, but that's substantially different from your first idea.
+
+
+
+
+What techniques can the server or the browser use to prevent what Moriarty is doing?
+
+
+
 
 
 
