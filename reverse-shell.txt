@@ -1,0 +1,14 @@
+David Toledo
+
+web shell
+1. Explain how you can execute the Linux command whoami on the server using your webshell. What result do you get when you execute that command?
+
+we can access the webshell I uploaded by going to: http://danger.jeffondich.com/uploadedimages/toledod-webshell1.php
+this results in it simply echoing "No command requested."
+
+by now doing: http://danger.jeffondich.com/uploadedimages/toledod-webshell1.php?command=whoami, I give it a command field, which activates the webshell and executes the command.
+this results in: www-data
+
+2. What is this webshell's <pre> tag for? (And more to the point, what happens if you leave it out?)
+the <pre> tag keeps whatever is within it in that exact format, including the white space in it. This also effects how it is displayed, as the apparent change between the two comes
+from the font that the webshell gets displayed in.
