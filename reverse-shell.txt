@@ -10,8 +10,7 @@ by now doing: http://danger.jeffondich.com/uploadedimages/toledod-webshell1.php?
 this results in: www-data
 
 2. What is this webshell's <pre> tag for? (And more to the point, what happens if you leave it out?)
-the <pre> tag keeps whatever is within it in that exact format, including the white space in it. This also effects how it is displayed, as the apparent change between the two comes
-from the font that the webshell gets displayed in.
+the <pre> tag keeps whatever is within it in that exact format (pre-formated text), including the white space / new lines in it. This also effects how it is displayed, as the apparent change between the two comes from the font that the webshell gets displayed in.
 
 looking around:
 
