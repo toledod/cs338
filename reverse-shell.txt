@@ -12,3 +12,21 @@ this results in: www-data
 2. What is this webshell's <pre> tag for? (And more to the point, what happens if you leave it out?)
 the <pre> tag keeps whatever is within it in that exact format, including the white space in it. This also effects how it is displayed, as the apparent change between the two comes
 from the font that the webshell gets displayed in.
+
+looking around:
+
+What directory is danger's website located in?
+  /var/www/
+What are the names of all the user accounts on danger.jeffondich.com? How do you know?
+
+
+Do you have access to the file /etc/passwd? What's in it?
+
+
+
+Do you have access to the file /etc/shadow? What's in it? (You'll have to look onliine for the answer to that second question, since the answer to the first is no.)
+
+
+
+There may be some secret files scattered around. See how many you can find and report on your discoveries.
+[Optional] Report on anything else interesting you discover.
