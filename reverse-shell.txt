@@ -29,4 +29,6 @@ Do you have access to the file /etc/shadow? What's in it? (You'll have to look o
 
 
 There may be some secret files scattered around. See how many you can find and report on your discoveries.
-[Optional] Report on anything else interesting you discover.
+
+In secrets, there is a kindasecret.txt file which contains "Congratulations!" and an ASCII picture of a frog
+In youwontfindthiswithgobuster, there is a secret file that contains "Congratulations!" and an ASCII picture of birds
