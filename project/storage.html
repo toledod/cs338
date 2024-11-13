@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TouchIDwebsite</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="images/logo.png">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<header class="navbar">
+    <div class="navbar-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/976px-Apple_logo_black.svg.png?20220821121934" alt="Logo">
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="storage.html">Storage</a></li>
+            <li><a href="#">Faults</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Storage</h1>
+    <br>
+    <p>Apple stores TouchID information in something called an Storage Enclave</p>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="feature">
+        <h2>The Storage Enclave</h2>
+        <br>
+        <p class = "bodyText">This is included in every device's chip that contains TouchID. Apple describes this as an "advanced security architecture" that was deisgned to protect this type of information. Rather than storing the actual scans/images of your fingerprint, it stores a mathamatical representation of them, which Apple claims it "isn't possible for someone to reverse engineer your actual fingerprint image from this stored data."</p>
+        <br>
+        <p class = "bodyText">The Secure Enclave is seperated from the main processor, and has it's own Secure Enclave Processor to provide computing power. Having this dedicated procesor helps "prevent side-channel attacks that depend on malicious software sharing the same execution core as the target software under attack."</p>
+        <br>
+        <div class="featureIMG">
+            <img class = "imageDisplays2" src = "https://help.apple.com/assets/6537FB06A074DBB5E802EA07/6537FB31280588A5490B6E1D/en_US/9302f62027e1966222080ef2731e45de.png">
+        </div>
+        <br>
+        <p class = "bodyText"> When the device is started up, a random key is genrerated for the Memory Protection Engine to use. "Whenever the Secure Enclave writes to its dedicated memory region, the Memory Protection Engine encrypts the block of memory using AES in Mac XEX (xor-encrypt-xor) mode and calculates a Cipher-based Message Authentication Code (CMAC) authentication tag for the memory." When the Secure Enclave reads from memory, the Memory Protection Engine verfies the tag. If this verification fails, the Secure Enclave stops accepting requests.
+        </p>
+        <br>
+        <p class = "bodyText"> The Secure Enclave can't be accessed by the OS on your device, or by any applications running on it. It is never stored on Apple servers, or backed up to iCloud or anywhere else, and it can't be used to match against other fingerprint databases.
+        </p>
+    </div>
+</section>
+
+
+</body>
+</html>
