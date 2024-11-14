@@ -72,6 +72,24 @@ body {
     margin-bottom: 2rem;
 }
 
+
+
+.heroRe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(to bottom, #e6e6e9, #deeeff);
+}
+
+.heroRe h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
 /* Features Section */
 .features {
     display: flex;
@@ -119,6 +137,10 @@ body {
     height: 600px;
 }
 
+.imageDisplays3{
+    width: 400px;
+    height: 200px;
+}
 .introText{
     text-align: justify;
 }
@@ -128,6 +150,11 @@ body {
     width: 400px;
 }
 
+.bibl{
+    width: auto;
+    text-align: left;
+    text-wrap:balance;
+}
 
 
 /* Responsive Design */
