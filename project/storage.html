@@ -12,14 +12,16 @@
 <!-- Navigation Bar -->
 <header class="navbar">
     <div class="navbar-logo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/976px-Apple_logo_black.svg.png?20220821121934" alt="Logo">
+        <a class = "appleLogo" href="index.html">
+            <img class = "appleLogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/976px-Apple_logo_black.svg.png?20220821121934" alt="Logo">
+        </a>
     </div>
     <nav>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">How It Works</a></li>
+            <li><a href="howItWorks.html">How It Works</a></li>
             <li><a href="storage.html">Storage</a></li>
-            <li><a href="#">Faults</a></li>
+            <li><a href="faults.html">Faults</a></li>
         </ul>
     </nav>
 </header>
@@ -36,7 +38,7 @@
     <div class="feature">
         <h2>The Storage Enclave</h2>
         <br>
-        <p class = "bodyText">This is included in every device's chip that contains TouchID. Apple describes this as an "advanced security architecture" that was deisgned to protect this type of information. Rather than storing the actual scans/images of your fingerprint, it stores a mathamatical representation of them, which Apple claims it "isn't possible for someone to reverse engineer your actual fingerprint image from this stored data." Once a match is identified, the Secure Enclave grants access almost immediately. This matching process occurs within milliseconds, balancing speed and security. Apple has optimized the TouchID algorithm to keep the False Acceptance Rate (FAR) exceptionally low, meaning that the chance of a wrong fingerprint being accepted is minimal, roughly 1 in 50,000 (Apple Inc., 2023).
+        <p class = "bodyText">This is included in every device's chip that contains TouchID. Apple describes this as an "advanced security architecture" that was deisgned to protect this type of information. Rather than storing the actual scans/images of your fingerprint, it stores a mathamatical representation of them, which Apple claims it "isn't possible for someone to reverse engineer your actual fingerprint image from this stored data." Once a match is identified, the Secure Enclave grants access almost immediately. This matching process occurs within milliseconds, balancing speed and security. Apple has optimized the TouchID algorithm to keep the False Acceptance Rate (FAR) exceptionally low, meaning that the chance of a wrong fingerprint being accepted is minimal, roughly 1 in 50,000 (Apple Inc., 2024).
         </p>
         <br>
         <p class = "bodyText">The Secure Enclave is seperated from the main processor, and has it's own Secure Enclave Processor to provide computing power. Having this dedicated procesor helps "prevent side-channel attacks that depend on malicious software sharing the same execution core as the target software under attack."</p>
@@ -45,10 +47,10 @@
             <img class = "imageDisplays2" src = "https://help.apple.com/assets/6537FB06A074DBB5E802EA07/6537FB31280588A5490B6E1D/en_US/9302f62027e1966222080ef2731e45de.png">
         </div>
         <br>
-        <p class = "bodyText"> When the device is started up, a random key is genrerated for the Memory Protection Engine to use. "Whenever the Secure Enclave writes to its dedicated memory region, the Memory Protection Engine encrypts the block of memory using AES in Mac XEX (xor-encrypt-xor) mode and calculates a Cipher-based Message Authentication Code (CMAC) authentication tag for the memory." When the Secure Enclave reads from memory, the Memory Protection Engine verfies the tag. If this verification fails, the Secure Enclave stops accepting requests.
+        <p class = "bodyText"> When the device is started up, a random key is genrerated for the Memory Protection Engine to use. "Whenever the Secure Enclave writes to its dedicated memory region, the Memory Protection Engine encrypts the block of memory using AES in Mac XEX (xor-encrypt-xor) mode and calculates a Cipher-based Message Authentication Code (CMAC) authentication tag for the memory." (Apple Inc., 2024) When the Secure Enclave reads from memory, the Memory Protection Engine verfies the tag. If this verification fails, the Secure Enclave stops accepting requests.
         </p>
         <br>
-        <p class = "bodyText"> The Secure Enclave can't be accessed by the OS on your device, or by any applications running on it. It is never stored on Apple servers, or backed up to iCloud or anywhere else, and it can't be used to match against other fingerprint databases.
+        <p class = "bodyText"> The Secure Enclave can't be accessed by the OS on your device, or by any applications running on it. It is never stored on Apple servers, or backed up to iCloud or anywhere else, and it can't be used to match against other fingerprint databases. (Apple Inc., 2024)
         </p>
     </div>
 </section>

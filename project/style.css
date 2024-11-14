@@ -11,6 +11,11 @@ body {
     color: #1d1d1f;
 }
 
+.appleLogo:hover{
+    cursor: pointer;
+    
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
