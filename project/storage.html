@@ -36,7 +36,8 @@
     <div class="feature">
         <h2>The Storage Enclave</h2>
         <br>
-        <p class = "bodyText">This is included in every device's chip that contains TouchID. Apple describes this as an "advanced security architecture" that was deisgned to protect this type of information. Rather than storing the actual scans/images of your fingerprint, it stores a mathamatical representation of them, which Apple claims it "isn't possible for someone to reverse engineer your actual fingerprint image from this stored data."</p>
+        <p class = "bodyText">This is included in every device's chip that contains TouchID. Apple describes this as an "advanced security architecture" that was deisgned to protect this type of information. Rather than storing the actual scans/images of your fingerprint, it stores a mathamatical representation of them, which Apple claims it "isn't possible for someone to reverse engineer your actual fingerprint image from this stored data." Once a match is identified, the Secure Enclave grants access almost immediately. This matching process occurs within milliseconds, balancing speed and security. Apple has optimized the TouchID algorithm to keep the False Acceptance Rate (FAR) exceptionally low, meaning that the chance of a wrong fingerprint being accepted is minimal, roughly 1 in 50,000 (Apple Inc., 2023).
+        </p>
         <br>
         <p class = "bodyText">The Secure Enclave is seperated from the main processor, and has it's own Secure Enclave Processor to provide computing power. Having this dedicated procesor helps "prevent side-channel attacks that depend on malicious software sharing the same execution core as the target software under attack."</p>
         <br>
